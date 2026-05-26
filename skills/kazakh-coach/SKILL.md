@@ -17,6 +17,18 @@ State lives on the RunDrill MCP server. Tools:
 
 All calls take `language: "kk"` except `profile_set` (shared).
 
+**If the server isn't connected.** Your first action is `status`. If the `rundrill-kazakh` MCP tools
+aren't available, or a call fails with an authorization/connection error, **stop — don't fake a
+level, progress, or a drill.** Tell the user in plain words that the coach needs its server
+authorized once, and how:
+
+> The Kazakh coach connects to the RunDrill server, but it isn't authorized yet. Open your agent's
+> **MCP settings**, find **rundrill-kazakh**, and press **Authorize** (Claude Code/Desktop: the
+> plugins/MCP settings panel; Codex: Settings → MCP; Antigravity: the plugin's MCP panel). A browser
+> tab opens for a quick sign-in, then closes. Say "ready" and I'll start.
+
+Then retry `status` once the user confirms. Nothing else works until the server is connected.
+
 ## What's different from a typical language coach
 
 - **CEFR starts at A0.** Many users see the Kazakh alphabet for the first time. The first diagnostic item must check whether they recognise Cyrillic letters specific to Kazakh (ә, ғ, қ, ң, ө, ұ, ү, һ, і). Don't try to test grammar on someone who can't read.
