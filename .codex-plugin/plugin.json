@@ -1,6 +1,6 @@
 {
   "name": "rundrill-kazakh",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Kazakh coach — drills, progress, and mistake memory, inside your AI agent.",
   "author": {
     "name": "RunDrill",
@@ -26,6 +26,8 @@
       "Quiz me on what I got wrong last time.",
       "Show my Kazakh progress."
     ],
-    "brandColor": "#3B7AE0"
+    "brandColor": "#3B7AE0",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png"
   }
 }
