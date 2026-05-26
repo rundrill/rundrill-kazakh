@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "rundrill-kazakh": {
+      "type": "http",
+      "url": "https://mcp.rundrill.com/lang"
+    }
+  }
+}

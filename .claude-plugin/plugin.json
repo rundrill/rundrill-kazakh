@@ -1,0 +1,13 @@
+{
+  "name": "rundrill-kazakh",
+  "displayName": "RunDrill Kazakh",
+  "version": "0.1.0",
+  "description": "Kazakh coach — drills, progress, and mistake memory, inside your AI agent.",
+  "author": {
+    "name": "RunDrill",
+    "email": "salem@rundrill.com"
+  },
+  "homepage": "https://rundrill.com",
+  "license": "CC-BY-NC-ND-4.0",
+  "keywords": ["rundrill", "course", "coach", "drills", "kazakh"]
+}

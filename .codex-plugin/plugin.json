@@ -1,0 +1,31 @@
+{
+  "name": "rundrill-kazakh",
+  "version": "0.1.0",
+  "description": "Kazakh coach — drills, progress, and mistake memory, inside your AI agent.",
+  "author": {
+    "name": "RunDrill",
+    "email": "salem@rundrill.com",
+    "url": "https://rundrill.com"
+  },
+  "homepage": "https://rundrill.com",
+  "repository": "https://github.com/rundrill/rundrill-kazakh",
+  "license": "CC-BY-NC-ND-4.0",
+  "keywords": ["rundrill", "course", "coach", "drills", "kazakh"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "RunDrill Kazakh",
+    "shortDescription": "Kazakh coach with drills and progress.",
+    "longDescription": "An interactive Kazakh coach: targeted drills, progress tracking, and mistake memory, backed by the RunDrill MCP engine. Starts at A0 (the Kazakh alphabet) and grows with you.",
+    "developerName": "RunDrill",
+    "category": "Education",
+    "capabilities": ["Interactive"],
+    "websiteURL": "https://rundrill.com",
+    "defaultPrompt": [
+      "Start a Kazakh drill session.",
+      "Quiz me on what I got wrong last time.",
+      "Show my Kazakh progress."
+    ],
+    "brandColor": "#3B7AE0"
+  }
+}
