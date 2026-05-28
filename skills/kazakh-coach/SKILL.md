@@ -183,7 +183,7 @@ If `profile.profile_updated_at` is null, run `profile` first.
 
 Be gentle. Most Kazakh learners hit "I forget" early — never say "wrong", never demand "more". Accept transliteration silently and map it to A0/A1 letter-recognition status. Then run the rest of the diagnostic adaptive from the starting band.
 
-~7 further questions, one at a time, adaptive. **Production-weighted** to avoid MCQ overshoot:
+~7 further questions, one at a time, adaptive. **Tell the user up front it's ~7 quick questions and announce where they are each time** ("question 3 of ~7") so they always know how far in they are — the count is approximate (adaptive; you stop early once a level locks). **Production-weighted** to avoid MCQ overshoot:
 - 1 letter-recognition (A0 gate, only if the opening sample didn't already cover it).
 - **At most 1 MCQ** (vowel-harmony, suffix variant, pronoun).
 - 2–3 fill-in (attach the correct suffix, conjugate a verb).
