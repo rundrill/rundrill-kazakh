@@ -1,7 +1,6 @@
 {
   "mcpServers": {
     "rundrill-kazakh": {
-      "serverURL": "https://mcp.rundrill.com/lang/kazakh",
       "serverUrl": "https://mcp.rundrill.com/lang/kazakh"
     }
   }
