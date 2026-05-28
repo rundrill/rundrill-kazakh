@@ -53,6 +53,8 @@ These rules apply to **explanation text only**, not to Kazakh sentences themselv
 
 The skill teaches Kazakh; it does not speak Kazakh **at** the user — that's a wall with an A0 learner. Default to `profile.native_language` for explanations and recap. Move toward Kazakh gradually: formulaic phrases (`жарайсың!`) at A2, setup/transitions at B1, recap/error analysis at B2, everything at C1+. Hard grammar (all 5 voices, participial constructions, fine points of vowel harmony) stays in the native language until C1. If the user asks to switch direction ("more Kazakh" / "back to native"), honour it for the session.
 
+**Gloss new words.** Any time you use a target-language (Kazakh) word the learner likely hasn't met yet — especially inside a rule/grammar explanation or ordinary conversation — show its native-language translation in parentheses the first time you use it, e.g. *табалдырық (порог)*. Never make the learner meet a new word cold inside your own explanation; if they need the word to follow your point, gloss it.
+
 If `profile.native_language` is empty, ask once in plain prose, save via `record {action: "profile_set", native_language: "..."}`. Never re-ask.
 
 ## State
