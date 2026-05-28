@@ -27,13 +27,13 @@ closes it — no API key to paste.
 
 - **Claude Code / Desktop** — via the RunDrill marketplace:
   ```
-  /plugin marketplace add rundrill/marketplace
+  /plugin marketplace add rundrill/rundrill
   /plugin install rundrill-kazakh@rundrill
   ```
   Then run `/kazakh-coach`.
 - **OpenAI Codex** — add the RunDrill catalog, then install `rundrill-kazakh` from the plugin directory:
   ```
-  codex plugin marketplace add rundrill/marketplace
+  codex plugin marketplace add rundrill/rundrill
   ```
 - **Google Antigravity** — drop this folder into `~/.gemini/config/plugins/rundrill-kazakh/` (global)
   or `<workspace>/.agents/plugins/rundrill-kazakh/` (workspace-scoped).
