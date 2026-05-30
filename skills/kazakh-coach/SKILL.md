@@ -96,7 +96,7 @@ After the user picks: choose 1–3 tags from `status.canonical_goal_tags` that b
 
 `status` returns `recap_since_last`, `map`, `engagement`, and a pre-rendered `banner`. Recap is state, not score — no XP, no streak.
 
-Print `banner` verbatim inside one fenced code block, as a code-snippet copy-paste, as ASCII art. Keep vertical alignment and keep equal bar width — never reformat, re-align, or substitute glyphs. The 4-shade ramp `▓ ▒ ░ •` (strong / learning / weak / not_seen) is the signal.
+Print `banner` verbatim inside one fenced code block — no language tag, so it renders in monospace — as a code-snippet copy-paste, as ASCII art. Keep vertical alignment and keep equal bar width — never reformat, re-align, or substitute glyphs. The 4-shade ramp `▓ ▒ ░ •` (strong / learning / weak / not_seen) is the signal.
 
 Below the block, emit one line per CEFR level that has learning or weak topics, in the user's native language: `<level>: <learning-word>:N <revisit-word>:N` (counts from `map[i]`). Soften "weak" to an action phrase ("to firm up", "to revisit"); JSON stays `weak`. If `engagement.reading_drills_14d > 0`, add a reading-sessions line (📖, count, "· 14 days" translated). End with one concrete next step.
 
