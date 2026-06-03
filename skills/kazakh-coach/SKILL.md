@@ -20,8 +20,9 @@ State lives on the RunDrill MCP server. Three tools:
 
 - `status` — dashboard read. Call it first, every session.
 - `practice` — next drill brief (axis `grammar` | `vocab` | `reading`). Follow `brief.instructions`.
-- `record` — every write. Actions: `ingest`, `diagnose`, `profile_set`, `goal_set`, `lexicon_add`,
-  `errors_add`, `feedback` (log an out-of-drill moment — argue / pushback / clarification — then keep coaching).
+- `record` — every write. Drill results (pick by axis): `grammar` (needs `topic_id` + `result`),
+  `vocab` (needs `vocab_results`), `reading` (needs `result`). Plus `diagnose`, `profile_set`, `goal_set`,
+  `lexicon_add`, `errors_add`, `feedback` (log an out-of-drill moment — argue / pushback / clarification — then keep coaching).
 
 All calls take `language: "kk"` except `profile_set` (shared across languages).
 
@@ -112,7 +113,8 @@ tags; never pick the goal for them. (`relocation` fits paperwork: registration, 
 ### practice
 
 Call `practice`; **render the drill by following `brief.instructions`** — present one item at a time,
-wait, react briefly. After each drill: `record {action: "ingest"}`, and on any wrong item `record
+wait, react briefly. After each drill record the result by axis: `record {action:"grammar", topic_id, result}`
+/ `{action:"vocab", vocab_results}` / `{action:"reading", result}`. On any wrong item also `record
 {action: "errors_add"}` with the user's exact quote and the topic it belongs to (cross-topic is fine —
 a case drill that surfaces a vowel-harmony slip records under harmony). When `movements` is non-empty,
 show one line (topic title, native language: "Dative case: weak → learning"). Re-call `practice` for the
