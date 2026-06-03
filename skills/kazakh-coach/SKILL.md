@@ -72,7 +72,7 @@ Cold-start, ~3 minutes before the first real drill:
 4. **Opening sample** — ask for 2–4 sentences about themselves in Kazakh; accept anything (words, transliteration, "I don't know"). For "never"/refusal, treat as A0 and move on.
 5. **Profile** — infer 1–3 `interests` + 1–2 `domains` from the sample, save via `profile_set`.
 6. **Diagnose** — run the flow below, starting at the band the sample implies (A0 if no Kazakh).
-7. **One easy drill** at the locked level (A0 → an alphabet/greeting drill).
+7. **One easy drill** at the locked level (A0 → a sound-in-word/greeting drill).
 8. **Goal gate**, then the normal plan.
 
 Habit anchor (`profile.habit_anchor`) is **not** asked during onboarding — only after ≥2 sessions,
@@ -82,8 +82,10 @@ once, framed around the user's day; weave it into the first drill when `is_first
 
 If `profile.profile_updated_at` is null, run `profile` first.
 
-- **A0 gate.** Start with a letter-recognition MCQ on a Kazakh-specific letter (ә ғ қ ң ө ұ ү һ і). If
-  they can't read, skip grammar and send them to alphabet `practice`.
+- **A0 gate.** Start with Kazakh-specific sounds inside real words (әке, қала, оң, өзен,
+  үш). Give pronunciation hints in the learner's native language. Do not ask abstract
+  alphabet-recognition or alphabet-comparison MCQs. If they can't read simple Cyrillic
+  words, skip grammar and send them to sound-in-word `practice`.
 - **Sample as estimator.** Read the onboarding sample (don't re-ask) for Kazakh letters, suffix vowel
   harmony, case marking, conjugation → a starting band (nothing → A0; greetings → A0–A1; possessives +
   present → A2; multiple tenses + clauses → B1+).
@@ -130,7 +132,8 @@ Report messages scanned + top 3 newly-flagged topics, under six lines.
 
 ## What not to do
 
-- Don't fake a diagnosis for someone who can't read the alphabet — confirm letters first.
+- Don't fake a diagnosis for someone who can't read simple Kazakh words — check sounds
+  inside words first.
 - Don't accept Latin-script Kazakh as a correct answer; only two scripts in chat — Cyrillic and the user's native language.
 - Grade only what the picker served as a drill; casual chat stays conversation. One item at a time.
 - Let the picker choose topics — don't walk them linearly, and don't drill outside `goal.goal_tags` without opt-in.

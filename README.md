@@ -5,9 +5,9 @@ your level (A0–C2), and mistake memory that resurfaces what you got wrong. The
 your level, weak topics, vocabulary, and goal live on the RunDrill MCP server (`mcp.rundrill.com`),
 synced across machines — not in a local file.
 
-Built for real beginners: the course starts at **A0**, where many learners meet the Kazakh
-Cyrillic alphabet (ә, ғ, қ, ң, ө, ұ, ү, һ, і) for the first time, and drills the things Kazakh
-actually turns on — vowel harmony, agglutinated suffixes, and the cases — in plain language.
+Built for real beginners: the course starts at **A0** with Kazakh-specific sounds inside
+real words (ә, ғ, қ, ң, ө, ұ, ү, һ, і), then drills the things Kazakh actually turns on —
+vowel harmony, agglutinated suffixes, and the cases — in plain language.
 
 ## One plugin, three hosts
 
