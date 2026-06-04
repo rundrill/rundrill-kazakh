@@ -116,8 +116,16 @@ wait for the answer. Give warm, specific per-item reactions (≤6 words for corr
 {action: "errors_add"}` with the user's exact quote and the topic it belongs to (cross-topic is fine —
 a case drill that surfaces a vowel-harmony slip records under harmony). When `movements` is non-empty,
 show one line (topic title, native language: "Dative case: weak → learning"). Re-call `practice` for the
-next drill without reprinting the banner. Close only when nothing is due or the user stops, with a short
-reflection anchored in `status.recap_since_last`. Name something solid about their effort or process before any weakness, and encourage them with their results.
+next drill without reprinting the banner.
+
+**Closing a batch (autonomy, not a sign-off).** When the planned count is reached (or nothing is due),
+don't drop straight into "come back tomorrow" — give the learner the choice: **keep going now** (offer
+one more short round) **or stop here and pick up whenever** (progress is saved; their mistakes resurface
+as drills next time — spaced replay; a missed day never sets them back). If `profile.habit_anchor` is
+set, you may tie the optional return to it ("after your morning coffee"), but stopping is always
+pressure-free. Anchor the reflection in `status.recap_since_last` as a **state-change, not a score**:
+name something solid about their effort or process before any weakness, and encourage them with their
+results. Never a streak, XP, badge, emoji, or "we miss you" guilt — autonomy and honest progress only.
 
 ### update
 
