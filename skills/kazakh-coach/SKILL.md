@@ -72,7 +72,7 @@ Cold-start, ~3 minutes before the first real drill:
 4. **Opening sample** — ask for 2–4 sentences about themselves in Kazakh; accept anything (words, transliteration, "I don't know"). For "never"/refusal, treat as A0 and move on.
 5. **Profile** — infer 1–3 `interests` + 1–2 `domains` from the sample, save via `profile_set`.
 6. **Diagnose** — run the flow below, starting at the band the sample implies (A0 if no Kazakh).
-7. **One easy drill** at the locked level (A0 → a sound-in-word/greeting drill).
+7. **One easy drill** at the locked level (A0 → a simple greeting drill).
 8. **Goal gate**, then the normal plan.
 
 Habit anchor (`profile.habit_anchor`) is **not** asked during onboarding — only after ≥2 sessions,
@@ -82,10 +82,6 @@ once, framed around the user's day; weave it into the first drill when `is_first
 
 If `profile.profile_updated_at` is null, run `profile` first.
 
-- **A0 gate.** Start by asking how to pronounce a Kazakh-specific sound (ә, ғ, қ, ң, ө, ұ, ү, һ, і) — e.g. where the throat or tongue is. Then check sounds inside real words (әке, қала, оң, өзен,
-  үш). Give pronunciation hints in the learner's native language. Do not ask abstract
-  alphabet-recognition or alphabet-comparison MCQs. If they can't read simple Cyrillic
-  words, skip grammar and send them to sound-in-word `practice`.
 - **Sample as estimator.** Read the onboarding sample (don't re-ask) for Kazakh letters, suffix vowel
   harmony, case marking, conjugation → a starting band (nothing → A0; greetings → A0–A1; possessives +
   present → A2; multiple tenses + clauses → B1+).
