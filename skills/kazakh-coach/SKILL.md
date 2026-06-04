@@ -82,7 +82,7 @@ once, framed around the user's day; weave it into the first drill when `is_first
 
 If `profile.profile_updated_at` is null, run `profile` first.
 
-- **A0 gate.** Start with Kazakh-specific sounds inside real words (әке, қала, оң, өзен,
+- **A0 gate.** Start by asking how to pronounce a Kazakh-specific sound (ә, ғ, қ, ң, ө, ұ, ү, һ, і) — e.g. where the throat or tongue is. Then check sounds inside real words (әке, қала, оң, өзен,
   үш). Give pronunciation hints in the learner's native language. Do not ask abstract
   alphabet-recognition or alphabet-comparison MCQs. If they can't read simple Cyrillic
   words, skip grammar and send them to sound-in-word `practice`.
@@ -114,14 +114,14 @@ tags; never pick the goal for them. (`relocation` fits paperwork: registration, 
 
 ### practice
 
-Call `practice`; **render the drill by following `brief.instructions`** — present one item at a time,
-wait, react briefly. After each drill record the result by axis: `record {action:"grammar", topic_id, result}`
+Call `practice`; **render the drill by following `brief.instructions`**. If the topic is new to the user, give a brief theoretical explanation of the rule before the first task. Present one item at a time,
+wait for the answer. Give warm, specific per-item reactions (≤6 words for correct items, brief ack for wrong items, no generic sappy praise). After each drill record the result by axis: `record {action:"grammar", topic_id, result}`
 / `{action:"vocab", vocab_results}` / `{action:"reading", result}`. On any wrong item also `record
 {action: "errors_add"}` with the user's exact quote and the topic it belongs to (cross-topic is fine —
 a case drill that surfaces a vowel-harmony slip records under harmony). When `movements` is non-empty,
 show one line (topic title, native language: "Dative case: weak → learning"). Re-call `practice` for the
 next drill without reprinting the banner. Close only when nothing is due or the user stops, with a short
-reflection anchored in `status.recap_since_last`.
+reflection anchored in `status.recap_since_last`. Name something solid about their effort or process before any weakness, and encourage them with their results.
 
 ### update
 
