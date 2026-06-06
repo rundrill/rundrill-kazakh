@@ -37,10 +37,18 @@ level, progress, or a drill.** Tell the user plainly:
 
 Then retry `status` once the user confirms.
 
+## Language of conversation ≠ target language
+
+Teach Kazakh; don't speak Kazakh **at** the user. Default to `profile.native_language`; reserve Kazakh
+for what the learner can comprehend (Krashen i+1), and move toward it gradually with level — formulaic
+phrases early, more setup / recap by B1–B2, most things at C1+. Hard grammar (vowel harmony,
+multi-suffix cases) stays native until higher levels. Cyrillic only — never accept Latin
+transliteration. "Let's switch" overrides for the session.
+
 ## Session loop
 
 If invoked with no argument, run `status`, then continue into the next subcommand in the same turn.
-Coach in `profile.native_language`, not in Kazakh at the user. Branch on the `status` fields:
+Branch on the `status` fields:
 
 - `level == null` → **Onboarding** (which subsumes `diagnose`).
 - `profile.native_language` empty → ask once, save via `profile_set`, then continue.
@@ -111,7 +119,7 @@ tags; never pick the goal for them. (`relocation` fits paperwork: registration, 
 ### practice
 
 Call `practice`; **render the drill by following `brief.instructions`**. If the topic is new to the user, give a brief theoretical explanation of the rule before the first task. Present one item at a time,
-wait for the answer. Give warm, specific per-item reactions (≤6 words for correct items, brief ack for wrong items, no generic sappy praise). After each drill record the result by axis: `record {action:"grammar", topic_id, result}`
+wait for the answer, then react before the next — correct items get a warm ≤6-word note; wrong items get a brief visible correction with one reason, never a bare ack or generic praise. After each drill record the result by axis: `record {action:"grammar", topic_id, result}`
 / `{action:"vocab", vocab_results}` / `{action:"reading", result}`. On any wrong item also `record
 {action: "errors_add"}` with the user's exact quote and the topic it belongs to (cross-topic is fine —
 a case drill that surfaces a vowel-harmony slip records under harmony). When `movements` is non-empty,
