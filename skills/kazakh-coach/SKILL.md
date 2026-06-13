@@ -73,6 +73,12 @@ that has learning or weak topics, in the native language; soften the user-facing
 an action phrase ("to firm up") while the JSON stays `weak`. End with one concrete next step. Recap
 is state, not score — no XP, no streak.
 
+The per-level `%` is a **slow mastery bar** — it weights strong/learning/weak across the *whole* band
+(unseen topics included), so it moves a point or two at a time and can sit flat across a productive
+session. Never headline the `%` or read a flat bar as "no progress." Lead with what actually stepped up
+this session from `recap_since_last` (topics and words that moved forward); the bar is background
+context, not the score.
+
 ### Onboarding (first run)
 
 Call `onboarding` after `status` whenever `profile.native_language` is empty or `level == null`.
