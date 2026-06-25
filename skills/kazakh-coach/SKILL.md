@@ -60,18 +60,22 @@ Branch on the `status` fields:
 - `lexicon.due > 0` OR weak/learning topics → `practice` (mixed).
 - otherwise → `update`.
 
-Announce a short plan: drill count + rough time (~3 min/drill), cap ~5 unless asked. Surface a
-single neutral line for `recalibration_hint`, `engagement.days_since_last_drill >= 2`, or
-`lexicon.due` — never a streak, emoji, or guilt trip. Then proceed.
+Announce a short plan from `session_preview`: one line for what is ahead, then drill count + rough
+time (~3 min/drill), cap ~5 unless asked. Surface a single neutral line for `recalibration_hint`,
+`engagement.days_since_last_drill >= 2`, or `lexicon.due` — never a streak, emoji, or guilt trip.
+Then proceed.
 
 ### status banner
 
-`status` returns `recap_since_last`, `map`, `engagement`, and a pre-rendered `banner`. Print
+`status` returns `recap_since_last`, `session_preview`, `acquisition_artifact`, `map`,
+`engagement`, and a pre-rendered `banner`. Print
 `banner` **verbatim** inside one ` ```bash ` fenced block — never reformat, re-align, or substitute
 glyphs (the ramp `▓ ▒ ░ •` = strong / learning / weak / not_seen). Below it, one line per CEFR level
 that has learning or weak topics, in the native language; soften the user-facing word for "weak" to
-an action phrase ("to firm up") while the JSON stays `weak`. End with one concrete next step. Recap
-is state, not score — no XP, no streak.
+an action phrase ("to firm up") while the JSON stays `weak`. Then render `session_preview` as one
+short "what's ahead" line. If `acquisition_artifact` is present at a close, render it as
+"Приобретено: ..." plus one optional "next proof" line, never as a badge/reward. End with one
+concrete next step. Recap is state, not score — no XP, no streak.
 
 The per-level `%` is a **slow mastery bar** — it weights strong/learning/weak across the *whole* band
 (unseen topics included), so it moves a point or two at a time and can sit flat across a productive
@@ -129,16 +133,19 @@ wait for the answer, then react before the next — correct items get a warm ≤
 / `{action:"vocab", vocab_results}` / `{action:"reading", result}`. On any wrong item also `record
 {action: "errors_add"}` with the user's exact quote and the topic it belongs to (cross-topic is fine —
 a case drill that surfaces a vowel-harmony slip records under harmony). When `movements` is non-empty,
-show one line (topic title, native language: "Dative case: weak → learning"). Re-call `practice` for the
-next drill without reprinting the banner.
+show one line from `acquisition_artifact` when present; otherwise show the compact movement line (topic
+title, native language: "Dative case: weak → learning"). Grammar/vocab drills must have 3 or 5 tasks,
+never a single visible item; reading/writing can be one text or one production task. Localize visible
+labels to the learner's language. Re-call `practice` for the next drill without reprinting the banner.
 
 **Closing a batch (autonomy, not a sign-off).** When the planned count is reached (or nothing is due),
 don't drop straight into "come back tomorrow" — give the learner the choice: **keep going now** (offer
 one more short round) **or stop here and pick up whenever**. If `profile.habit_anchor` is
 set, you may tie the optional return to it ("after your morning coffee"), but stopping is always
 pressure-free. Anchor the reflection in `status.recap_since_last` as a **state-change, not a score**:
-name something solid about their effort or process before any weakness, and encourage them with their
-results. Never a streak, XP, badge, emoji, or "we miss you" guilt — autonomy and honest progress only.
+name something solid about their effort or process before any weakness, render
+`status.acquisition_artifact` if present, and encourage them with their results. Never a streak, XP,
+badge, emoji, or "we miss you" guilt — autonomy and honest progress only.
 
 ### update
 
